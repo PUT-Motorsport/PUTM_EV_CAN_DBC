@@ -1,0 +1,115 @@
+VERSION "1.0"
+NS_:
+BS_:
+BU_: PUTM_CAN
+
+BO_ 37 RearboxSafety: 2 PUTM_CAN
+ SG_ safety_rfu1 : 0|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_rfu2 : 1|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_asms : 2|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_fw : 3|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_hv : 4|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_res : 5|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_hvd : 6|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_inv : 7|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_wheel_fl : 8|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_wheel_fr : 9|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_wheel_rl : 10|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ safety_wheel_rr : 11|1@1+ (1,0) [0|1] "" PUTM_CAN
+
+BO_ 38 RearboxTemperature: 5 PUTM_CAN
+ SG_ mono_temperature : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ coolant_temperature_in : 8|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ coolant_temperature_out : 16|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ oil_temperature_l : 24|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ oil_temperature_r : 32|8@1+ (1,0) [0|255] "" PUTM_CAN
+
+BO_ 39 RearboxMiscellaneous: 6 PUTM_CAN
+ SG_ coolant_pressure_in : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ coolant_pressure_out : 8|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ suspension_l : 16|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ suspension_r : 32|16@1+ (1,0) [0|65535] "" PUTM_CAN
+
+BO_ 18 PcTemperatureData: 7 PUTM_CAN
+ SG_ rearRightInverterTemperature : 0|7@1+ (1,0) [0|127] "" PUTM_CAN
+ SG_ rearLeftInverterTemperature : 7|7@1+ (1,0) [0|127] "" PUTM_CAN
+ SG_ rearRightMotorTemperature : 14|7@1+ (1,0) [0|127] "" PUTM_CAN
+ SG_ rearLeftMotorTemperature : 21|7@1+ (1,0) [0|127] "" PUTM_CAN
+ SG_ frontRightInverterTemperature : 28|7@1+ (1,0) [0|127] "" PUTM_CAN
+ SG_ frontLeftInverterTemperature : 35|7@1+ (1,0) [0|127] "" PUTM_CAN
+ SG_ frontRightMotorTemperature : 42|7@1+ (1,0) [0|127] "" PUTM_CAN
+ SG_ frontLeftMotorTemperature : 49|7@1+ (1,0) [0|127] "" PUTM_CAN
+
+BO_ 16 PcMainData: 5 PUTM_CAN
+ SG_ vehicleSpeed : 0|6@1+ (1,0) [0|63] "" PUTM_CAN
+ SG_ power : 6|6@1+ (1,0) [0|63] "" PUTM_CAN
+ SG_ rpm : 12|15@1+ (1,0) [0|32767] "" PUTM_CAN
+ SG_ invertersReady : 27|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ rtd : 28|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_FL_status : 29|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_FR_status : 30|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_RL_status : 31|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_RR_status : 32|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_FL_error : 33|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_FR_error : 34|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_RL_error : 35|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_RR_error : 36|1@1+ (1,0) [0|1] "" PUTM_CAN
+
+BO_ 17 PcLapTimerData: 7 PUTM_CAN
+ SG_ currentLapTime : 0|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ bestLapTime : 16|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ delta_time : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ lap_counter : 48|8@1+ (1,0) [0|255] "" PUTM_CAN
+
+BO_ 48 PduData: 0 PUTM_CAN
+
+BO_ 5 DriverInput: 8 PUTM_CAN
+ SG_ pedalPosition : 0|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ brakePressureFront : 16|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ brakePressureRear : 32|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ steeringWheelPosition : 48|16@1+ (1,0) [0|65535] "" PUTM_CAN
+
+BO_ 53 FrontData: 7 PUTM_CAN
+ SG_ sense_left_kill : 0|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ sense_right_kill : 1|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ sense_driver_kill : 2|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ sense_inertia : 3|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ sense_bspd : 4|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ sense_overtravel : 5|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ sense_right_wheel : 6|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ is_braking : 7|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ frontLeftSuspension : 8|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ frontRightSuspension : 24|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ frontLeftHubTemperature : 40|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ frontRightHubTemperature : 48|8@1+ (1,0) [0|255] "" PUTM_CAN
+
+BO_ 21 Dashboard: 1 PUTM_CAN
+ SG_ ready_to_drive_button : 0|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ ts_activation_button : 1|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ user_button : 2|1@1+ (1,0) [0|1] "" PUTM_CAN
+
+BO_ 85 BMS_LV_main: 6 PUTM_CAN
+ SG_ voltage_sum : 0|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ soc : 16|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ temp_avg : 24|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ current : 32|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ device_state : 40|8@1+ (1,0) [0|255] "" PUTM_CAN
+
+BO_ 86 BMS_LV_temperature: 8 PUTM_CAN
+ SG_ temp_1 : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ temp_2 : 8|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ temp_3 : 16|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ temp_4 : 24|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ temp_5 : 32|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ temp_6 : 40|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ temp_7 : 48|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ temp_8 : 56|8@1+ (1,0) [0|255] "" PUTM_CAN
+
+BO_ 69 BMS_HV_main: 8 PUTM_CAN
+ SG_ voltage_sum : 0|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ current : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ temp_max : 32|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ temp_avg : 40|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ soc : 48|10@1+ (1,0) [0|1023] "" PUTM_CAN
+ SG_ ok : 58|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ precharge : 59|1@1+ (1,0) [0|1] "" PUTM_CAN
