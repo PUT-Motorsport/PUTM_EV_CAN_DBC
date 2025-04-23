@@ -113,3 +113,132 @@ BO_ 69 BMS_HV_main: 8 PUTM_CAN
  SG_ soc : 48|10@1+ (1,0) [0|1023] "" PUTM_CAN
  SG_ ok : 58|1@1+ (1,0) [0|1] "" PUTM_CAN
  SG_ precharge : 59|1@1+ (1,0) [0|1] "" PUTM_CAN
+
+
+; --- AMK Front Right Inverter ---
+BO_ 388 AmkFrontRightSetpoints1: 8 PUTM_CAN
+ SG_ AMK_bReserve1           : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ AMK_bInverterOn         : 8|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bDcOn               : 9|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bEnable             : 10|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bErrorReset         : 11|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bReserve2           : 12|4@1+ (1,0) [0|15]  "" PUTM_CAN
+ SG_ AMK_TargetVelocity      : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueLimitPositiv  : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueLimitNegativ  : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+BO_ 643 AmkFrontRightActualValues1: 8 PUTM_CAN
+ SG_ AMK_bReserve1           : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ AMK_bSystemReady        : 8|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bError              : 9|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bWarn               : 10|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bQuitDcOn           : 11|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bDcOn               : 12|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bQuitInverterOn     : 13|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bInverterOn         : 14|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bDerating           : 15|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_ActualVelocity      : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueCurrent       : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_MagnetizingCurrent  : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+BO_ 645 AmkFrontRightActualValues2: 8 PUTM_CAN
+ SG_ AMK_TempMotor           : 0|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TempInverter        : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_ErrorInfo           : 32|16@1+ (1,0) [0|65535]      "" PUTM_CAN
+ SG_ AMK_TempIGBT            : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+; --- AMK Front Left Inverter ---
+BO_ 393 AmkFrontLeftSetpoints1: 8 PUTM_CAN
+ SG_ AMK_bReserve1           : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ AMK_bInverterOn         : 8|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bDcOn               : 9|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bEnable             : 10|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bErrorReset         : 11|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bReserve2           : 12|4@1+ (1,0) [0|15]  "" PUTM_CAN
+ SG_ AMK_TargetVelocity      : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueLimitPositiv  : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueLimitNegativ  : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+BO_ 648 AmkFrontLeftActualValues1: 8 PUTM_CAN
+ SG_ AMK_bReserve1           : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ AMK_bSystemReady        : 8|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bError              : 9|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bWarn               : 10|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bQuitDcOn           : 11|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bDcOn               : 12|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bQuitInverterOn     : 13|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bInverterOn         : 14|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bDerating           : 15|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_ActualVelocity      : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueCurrent       : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_MagnetizingCurrent  : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+BO_ 650 AmkFrontLeftActualValues2: 8 PUTM_CAN
+ SG_ AMK_TempMotor           : 0|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TempInverter        : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_ErrorInfo           : 32|16@1+ (1,0) [0|65535]      "" PUTM_CAN
+ SG_ AMK_TempIGBT            : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+; --- AMK Rear Right Inverter ---
+BO_ 389 AmkRearRightSetpoints1: 8 PUTM_CAN
+ SG_ AMK_bReserve1           : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ AMK_bInverterOn         : 8|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bDcOn               : 9|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bEnable             : 10|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bErrorReset         : 11|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bReserve2           : 12|4@1+ (1,0) [0|15]  "" PUTM_CAN
+ SG_ AMK_TargetVelocity      : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueLimitPositiv  : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueLimitNegativ  : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+BO_ 644 AmkRearRightActualValues1: 8 PUTM_CAN
+ SG_ AMK_bReserve1           : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ AMK_bSystemReady        : 8|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bError              : 9|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bWarn               : 10|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bQuitDcOn           : 11|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bDcOn               : 12|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bQuitInverterOn     : 13|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bInverterOn         : 14|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bDerating           : 15|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_ActualVelocity      : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueCurrent       : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_MagnetizingCurrent  : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+BO_ 646 AmkRearRightActualValues2: 8 PUTM_CAN
+ SG_ AMK_TempMotor           : 0|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TempInverter        : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_ErrorInfo           : 32|16@1+ (1,0) [0|65535]      "" PUTM_CAN
+ SG_ AMK_TempIGBT            : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+; --- AMK Rear Left Inverter ---
+BO_ 392 AmkRearLeftSetpoints1: 8 PUTM_CAN
+ SG_ AMK_bReserve1           : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ AMK_bInverterOn         : 8|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bDcOn               : 9|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bEnable             : 10|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bErrorReset         : 11|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bReserve2           : 12|4@1+ (1,0) [0|15]  "" PUTM_CAN
+ SG_ AMK_TargetVelocity      : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueLimitPositiv  : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueLimitNegativ  : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+BO_ 647 AmkRearLeftActualValues1: 8 PUTM_CAN
+ SG_ AMK_bReserve1           : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ AMK_bSystemReady        : 8|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bError              : 9|1@1+ (1,0) [0|1]   "" PUTM_CAN
+ SG_ AMK_bWarn               : 10|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bQuitDcOn           : 11|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bDcOn               : 12|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bQuitInverterOn     : 13|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bInverterOn         : 14|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_bDerating           : 15|1@1+ (1,0) [0|1]  "" PUTM_CAN
+ SG_ AMK_ActualVelocity      : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TorqueCurrent       : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_MagnetizingCurrent  : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+
+BO_ 649 AmkRearLeftActualValues2: 8 PUTM_CAN
+ SG_ AMK_TempMotor           : 0|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_TempInverter        : 16|16@1- (1,0) [-32768|32767] "" PUTM_CAN
+ SG_ AMK_ErrorInfo           : 32|16@1+ (1,0) [0|65535]      "" PUTM_CAN
+ SG_ AMK_TempIGBT            : 48|16@1- (1,0) [-32768|32767] "" PUTM_CAN
