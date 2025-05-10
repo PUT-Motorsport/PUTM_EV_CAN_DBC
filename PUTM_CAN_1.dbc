@@ -536,10 +536,10 @@ BO_ 53 FrontData: 7 PUTM_CAN
  SG_ sense_overtravel : 5|1@1+ (1,0) [0|1] "" PUTM_CAN
  SG_ sense_right_wheel : 6|1@1+ (1,0) [0|1] "" PUTM_CAN
  SG_ is_braking : 7|1@1+ (1,0) [0|1] "" PUTM_CAN
- SG_ frontLeftSuspension : 8|16@1+ (1,0) [0|65535] "" PUTM_CAN
- SG_ frontRightSuspension : 24|16@1+ (1,0) [0|65535] "" PUTM_CAN
- SG_ frontLeftHubTemperature : 40|8@1+ (1,0) [0|255] "" PUTM_CAN
- SG_ frontRightHubTemperature : 48|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ apps : 8|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ apps_implausibility : 9|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ frontLeftSuspension : 17|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ frontRightSuspension : 33|16@1+ (1,0) [0|65535] "" PUTM_CAN
 
 BO_ 21 Dashboard: 1 PUTM_CAN
  SG_ ready_to_drive_button : 0|1@1+ (1,0) [0|1] "" PUTM_CAN
