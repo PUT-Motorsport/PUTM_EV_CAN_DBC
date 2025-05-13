@@ -519,7 +519,26 @@ BO_ 17 PcLapTimerData: 7 PUTM_CAN
  SG_ delta_time : 32|16@1- (1,0) [-32768|32767] "" PUTM_CAN
  SG_ lap_counter : 48|8@1+ (1,0) [0|255] "" PUTM_CAN
 
-BO_ 48 PdmData: 0 PUTM_CAN
+BO_ 48 PDU_CHANNEL: 4 PUTM_CAN
+ SG_ pc_status : 0|2@1+ (1,0) [0|3] "" PUTM_CAN
+ SG_ fan_status : 2|2@1+ (1,0) [0|3] "" PUTM_CAN
+ SG_ pump_status : 4|2@1+ (1,0) [0|3] "" PUTM_CAN
+ SG_ inverter_status : 6|2@1+ (1,0) [0|3] "" PUTM_CAN
+ SG_ fbox_status : 8|2@1+ (1,0) [0|3] "" PUTM_CAN
+ SG_ sdc_status : 10|2@1+ (1,0) [0|3] "" PUTM_CAN
+ SG_ dash_status : 12|2@1+ (1,0) [0|3] "" PUTM_CAN
+ SG_ tsal_hv_status : 14|2@1+ (1,0) [0|3] "" PUTM_CAN
+ SG_ rbox_diagport_brake_l_status : 16|2@1+ (1,0) [0|3] "" PUTM_CAN
+ SG_ brake_ir_air_status : 18|2@1+ (1,0) [0|3] "" PUTM_CAN
+
+BO_ 49 PDU_DATA: 8 PUTM_CAN
+ SG_ pc_current : 0|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ pump_current : 8|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ fan_current : 16|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ inverter_current : 24|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ fbox_current : 32|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ sdc_current : 40|8@1+ (1,0) [0|255] "" PUTM_CAN
+ SG_ total_current : 48|16@1+ (1,0) [0|65535] "" PUTM_CAN
 
 BO_ 5 DriverInput: 8 PUTM_CAN
  SG_ pedalPosition : 0|16@1+ (1,0) [0|65535] "" PUTM_CAN
