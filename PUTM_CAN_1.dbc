@@ -564,6 +564,7 @@ BO_ 21 Dashboard: 1 PUTM_CAN
  SG_ ready_to_drive_button : 0|1@1+ (1,0) [0|1] "" PUTM_CAN
  SG_ ts_activation_button : 1|1@1+ (1,0) [0|1] "" PUTM_CAN
  SG_ user_button : 2|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ drs_button : 3|1@1+ (1,0) [0|1] "" PUTM_CAN
 
 BO_ 85 BMS_LV_main: 6 PUTM_CAN
  SG_ voltage_sum : 0|16@1+ (1,0) [0|65535] "" PUTM_CAN
