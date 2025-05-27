@@ -499,18 +499,18 @@ BO_ 18 PcTemperatureData: 7 PUTM_CAN
  SG_ frontLeftMotorTemperature : 49|7@1+ (1,0) [0|127] "" PUTM_CAN
 
 BO_ 16 PcMainData: 5 PUTM_CAN
- SG_ vehicleSpeed : 0|16@1+ (1,0) [0|65535] ""
- SG_ torque_current : 16|16@1+ (1,0) [0|65535] ""
- SG_ invertersReady : 32|1@1+ (1,0) [0|1] ""
- SG_ rtd : 33|1@1+ (1,0) [0|1] ""
- SG_ inv_FL_status : 34|1@1+ (1,0) [0|1] ""
- SG_ inv_FR_status : 35|1@1+ (1,0) [0|1] ""
- SG_ inv_RL_status : 36|1@1+ (1,0) [0|1] ""
- SG_ inv_RR_status : 37|1@1+ (1,0) [0|1] ""
- SG_ inv_FL_error : 38|1@1+ (1,0) [0|1] ""
- SG_ inv_FR_error : 39|1@1+ (1,0) [0|1] ""
- SG_ inv_RL_error : 40|1@1+ (1,0) [0|1] ""
- SG_ inv_RR_error : 41|1@1+ (1,0) [0|1] ""
+ SG_ vehicleSpeed : 0|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ torque_current : 16|16@1+ (1,0) [0|65535] "" PUTM_CAN
+ SG_ invertersReady : 32|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ rtd : 33|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_FL_status : 34|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_FR_status : 35|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_RL_status : 36|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_RR_status : 37|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_FL_error : 38|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_FR_error : 39|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_RL_error : 40|1@1+ (1,0) [0|1] "" PUTM_CAN
+ SG_ inv_RR_error : 41|1@1+ (1,0) [0|1] "" PUTM_CAN
 
 BO_ 17 PcLapTimerData: 7 PUTM_CAN
  SG_ currentLapTime : 0|16@1+ (1,0) [0|65535] "" PUTM_CAN
