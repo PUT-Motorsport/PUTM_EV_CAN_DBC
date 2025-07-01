@@ -488,7 +488,7 @@ BO_ 39 RearboxMiscellaneous: 6 PUTM_CAN
  SG_ suspension_l : 16|16@1+ (1,0) [0|65535] "" PUTM_CAN
  SG_ suspension_r : 32|16@1+ (1,0) [0|65535] "" PUTM_CAN
 
-BO_ 18 PcTemperatureData: 7 PUTM_CAN
+BO_ 96 PcTemperatureData: 7 PUTM_CAN
  SG_ rearRightInverterTemperature : 0|7@1+ (1,0) [0|127] "" PUTM_CAN
  SG_ rearLeftInverterTemperature : 7|7@1+ (1,0) [0|127] "" PUTM_CAN
  SG_ rearRightMotorTemperature : 14|7@1+ (1,0) [0|127] "" PUTM_CAN
