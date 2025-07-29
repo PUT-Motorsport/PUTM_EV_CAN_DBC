@@ -463,18 +463,19 @@ BO_ 1041 IVT_Msg_Cmd: 8 Host
    SG_ IVT_ID_Cmd M : 7|8@0+ (1,0) [0|0] "" IVT_Mod
 
 BO_ 37 Rearbox_Safety: 2 REARBOX
- SG_ safety_rfu1 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_rfu2 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_asms : 2|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_fw : 3|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_hv : 4|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_res : 5|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_hvd : 6|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_inv : 7|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_wheel_fl : 8|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_wheel_fr : 9|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_wheel_rl : 10|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_wheel_rr : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_tsmp : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_rfu1 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_rfu2 : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_asms : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_fw : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_hv : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_res : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_hvd : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_inv : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_wheel_fl : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_wheel_fr : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_wheel_rl : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_wheel_rr : 12|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 38 Rearbox_Temperature: 5 REARBOX
  SG_ mono_temperature : 0|8@1+ (1,0) [0|255] "" Vector__XXX
