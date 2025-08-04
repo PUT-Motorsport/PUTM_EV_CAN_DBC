@@ -7,18 +7,18 @@ BU_: REARBOX PC PDU FRONTBOX DASHBOARD BMS_LV BMS_HV
 
 BO_ 37 Rearbox_Safety: 2 REARBOX
  SG_ safety_tsmp : 0|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_rfu1 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_rfu2 : 2|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_asms : 3|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_fw : 4|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_hv : 5|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_res : 6|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_hvd : 7|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_inv : 8|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_wheel_fl : 9|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_wheel_fr : 10|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_wheel_rl : 11|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ safety_wheel_rr : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_rfu : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_hv_battery : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_inv_hv : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_hvd : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_inv : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_wheel_fl : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_wheel_fr : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_wheel_rl : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_wheel_rr : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_suspension_rl : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_suspension_rr : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_motor_front : 12|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 38 Rearbox_Temperature: 5 REARBOX
  SG_ mono_temperature : 0|8@1+ (1,0) [0|255] "" Vector__XXX
@@ -97,12 +97,13 @@ BO_ 53 Front_Data: 7 FRONTBOX
  SG_ sense_inertia : 3|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ sense_bspd : 4|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ sense_overtravel : 5|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ sense_right_wheel : 6|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ is_braking : 7|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ apps : 8|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ apps_implausibility : 9|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ frontLeftSuspension : 17|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ frontRightSuspension : 33|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ safety_suspension_fl : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ safety_suspension_fr : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ is_braking : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ apps : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ apps_implausibility : 10|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ frontLeftSuspension : 18|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ frontRightSuspension : 34|16@1+ (1,0) [0|65535] "" Vector__XXX
 
 BO_ 21 Dashboard: 1 DASHBOARD
  SG_ ready_to_drive_button : 0|1@1+ (1,0) [0|1] "" Vector__XXX
