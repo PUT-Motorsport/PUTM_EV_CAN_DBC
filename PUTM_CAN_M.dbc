@@ -160,11 +160,11 @@ BO_ 86 Bms_LV_temperature: 8 BMS_LV
  SG_ temp_8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 69 Bms_HV_main: 8 BMS_HV
- SG_ voltage_sum : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ current : 16|16@1- (1,0) [-32768|32767] "" Vector__XXX
- SG_ temp_max : 32|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ temp_avg : 40|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ soc : 48|10@1+ (1,0) [0|1023] "" Vector__XXX
+ SG_ voltage_sum : 0|16@1+ (1,0) [0|65535] "cV" Vector__XXX
+ SG_ current : 16|16@1- (1,0) [-32768|32767] "cA" Vector__XXX
+ SG_ temp_max : 32|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ temp_avg : 40|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ soc : 48|10@1+ (1,0) [0|1023] "‰" Vector__XXX
  SG_ ok : 58|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ precharge : 59|1@1+ (1,0) [0|1] "" Vector__XXX
 
@@ -173,4 +173,7 @@ BO_ 32 SteeringWheel: 8 STEERING_WHEEL
  SG_ measurement2 : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement3 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement4 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+
+
 
