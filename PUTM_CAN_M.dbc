@@ -1,6 +1,5 @@
 VERSION "2.0"
 
-
 NS_ : 
 	NS_DESC_
 	CM_
@@ -33,7 +32,7 @@ NS_ :
 
 BS_:
 
-BU_: STEERING_WHEEL REARBOX PC PDU FRONTBOX DASHBOARD BMS_LV BMS_HV Host IVT_Mod
+BU_: STEERING_WHEEL REARBOX PC PDU FRONTBOX DASHBOARD BMS_LV BMS_HV Host IVT_Mod XSens
 
 
 BO_ 37 Rearbox_Safety: 2 REARBOX
@@ -173,6 +172,98 @@ BO_ 32 SteeringWheel: 8 STEERING_WHEEL
  SG_ measurement2 : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement3 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement4 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+ BO_ 1 Error: 1 XSens
+ SG_ ErrorCode : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 5 SampleTime: 4 XSens
+ SG_ SampleTime : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 6 GroupCounter: 2 XSens
+ SG_ GroupCounter : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 7 UTC: 8 XSens
+ SG_ Year : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Month : 8|8@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ Day : 16|8@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Hour : 24|8@1+ (1,0) [0|23] "" Vector__XXX
+ SG_ Minute : 32|8@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ Second : 40|8@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ TenthMilliseconds : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 17 StatusWord: 4 XSens
+ SG_ StatusWord : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 33 Quaternion: 8 XSens
+ SG_ Q0 : 0|16@1- (3.0519e-05,0) [-1|1] "" Vector__XXX
+ SG_ Q1 : 16|16@1- (3.0519e-05,0) [-1|1] "" Vector__XXX
+ SG_ Q2 : 32|16@1- (3.0519e-05,0) [-1|1] "" Vector__XXX
+ SG_ Q3 : 48|16@1- (3.0519e-05,0) [-1|1] "" Vector__XXX
+
+BO_ 34 EulerAngles: 6 XSens
+ SG_ Roll : 0|16@1- (0.0078,0) [-180|180] "deg" Vector__XXX
+ SG_ Pitch : 16|16@1- (0.0078,0) [-90|90] "deg" Vector__XXX
+ SG_ Yaw : 32|16@1- (0.0078,0) [-180|180] "deg" Vector__XXX
+
+BO_ 49 DeltaV: 7 XSens
+ SG_ dVx : 0|16@1- (0.0039,0) [-32768|32767] "" Vector__XXX
+ SG_ dVy : 16|16@1- (0.0039,0) [-32768|32767] "" Vector__XXX
+ SG_ dVz : 32|16@1- (0.0039,0) [-32768|32767] "" Vector__XXX
+ SG_ Exponent : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 50 RateOfTurn: 6 XSens
+ SG_ gyrX : 0|16@1- (0.0020,0) [-32768|32767] "rad/s" Vector__XXX
+ SG_ gyrY : 16|16@1- (0.0020,0) [-32768|32767] "rad/s" Vector__XXX
+ SG_ gyrZ : 32|16@1- (0.0020,0) [-32768|32767] "rad/s" Vector__XXX
+
+BO_ 51 DeltaQ: 8 XSens
+ SG_ dQ0 : 0|16@1- (3.0518e-05,0) [-32768|32767] "" Vector__XXX
+ SG_ dQ1 : 16|16@1- (3.0518e-05,0) [-32768|32767] "" Vector__XXX
+ SG_ dQ2 : 32|16@1- (3.0518e-05,0) [-32768|32767] "" Vector__XXX
+ SG_ dQ3 : 48|16@1- (3.0518e-05,0) [-32768|32767] "" Vector__XXX
+
+BO_ 52 Acceleration: 6 XSens
+ SG_ accX : 0|16@1- (0.0039,0) [-32768|32767] "m/s2" Vector__XXX
+ SG_ accY : 16|16@1- (0.0039,0) [-32768|32767] "m/s2" Vector__XXX
+ SG_ accZ : 32|16@1- (0.0039,0) [-32768|32767] "m/s2" Vector__XXX
+
+BO_ 53 FreeAcceleration: 6 XSens
+ SG_ freeAccX : 0|16@1- (0.0039,0) [-32768|32767] "m/s2" Vector__XXX
+ SG_ freeAccY : 16|16@1- (0.0039,0) [-32768|32767] "m/s2" Vector__XXX
+ SG_ freeAccZ : 32|16@1- (0.0039,0) [-32768|32767] "m/s2" Vector__XXX
+
+BO_ 65 MagneticField: 6 XSens
+ SG_ magX : 0|16@1- (0.00098,0) [-32768|32767] "a.u." Vector__XXX
+ SG_ magY : 16|16@1- (0.00098,0) [-32768|32767] "a.u." Vector__XXX
+ SG_ magZ : 32|16@1- (0.00098,0) [-32768|32767] "a.u." Vector__XXX
+
+BO_ 81 Temperature: 2 XSens
+ SG_ Temperature : 0|16@1- (0.0039,0) [-32768|32767] "°C" Vector__XXX
+
+BO_ 82 BaroPressure: 4 XSens
+ SG_ Pressure : 0|32@1+ (3.0518e-05,0) [0|4294967295] "Pa" Vector__XXX
+
+BO_ 97 AccelerationHR: 6 XSens
+ SG_ accX_HR : 0|16@1- (0.0039,0) [-32768|32767] "m/s2" Vector__XXX
+ SG_ accY_HR : 16|16@1- (0.0039,0) [-32768|32767] "m/s2" Vector__XXX
+ SG_ accZ_HR : 32|16@1- (0.0039,0) [-32768|32767] "m/s2" Vector__XXX
+
+BO_ 98 RateOfTurnHR: 6 XSens
+ SG_ gyrX_HR : 0|16@1- (0.0020,0) [-32768|32767] "rad/s" Vector__XXX
+ SG_ gyrY_HR : 16|16@1- (0.0020,0) [-32768|32767] "rad/s" Vector__XXX
+ SG_ gyrZ_HR : 32|16@1- (0.0020,0) [-32768|32767] "rad/s" Vector__XXX
+
+BO_ 113 LatitudeLongitude: 8 XSens
+ SG_ Latitude : 0|32@1- (5.9605e-08,0) [-2147483648|2147483647] "deg" Vector__XXX
+ SG_ Longitude : 32|32@1- (1.1921e-07,0) [-2147483648|2147483647] "deg" Vector__XXX
+
+BO_ 114 AltitudeEllipsoid: 4 XSens
+ SG_ Altitude : 0|32@1+ (3.0518e-05,0) [0|4294967295] "m" Vector__XXX
+
+BO_ 118 VelocityXYZ: 6 XSens
+ SG_ velX : 0|16@1- (0.0156,0) [-32768|32767] "m/s" Vector__XXX
+ SG_ velY : 16|16@1- (0.0156,0) [-32768|32767] "m/s" Vector__XXX
+ SG_ velZ : 32|16@1- (0.0156,0) [-32768|32767] "m/s" Vector__XXX
 
 
 BO_ 0 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
