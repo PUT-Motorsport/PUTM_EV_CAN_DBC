@@ -1,102 +1,209 @@
-VERSION "1.3"
+VERSION "1.4"
 
-NS_: 
+NS_ : 
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+
 BS_:
-BU_: AMK_Inverter
 
-BO_ 387 AmkRearLeftSetpoints1: 8 AMK_Inverter
- SG_ AMK_bInverterOn : 8|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bDcOn : 9|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bEnable : 10|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bErrorReset : 11|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_TargetVelocity : 16|16@1- (1,0) [-32768|32767] "rpm" Vector_XXX
- SG_ AMK_TorqueLimitPositive : 32|16@1- (1,0) [0|32767] "raw" Vector_XXX
- SG_ AMK_TorqueLimitNegative : 48|16@1- (1,0) [-32768|0] "raw" Vector_XXX
+BU_: AMK_INV_RL AMK_INV_RR AMK_INV_FR AMK_INV_FL PC
 
-BO_ 642 AmkRearLeftActualValues1: 8 AMK_Inverter
- SG_ AMK_bSystemReady : 8|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bError : 9|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bWarn : 10|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bDcOn : 12|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bInverterOn : 14|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_ActualVelocity : 16|16@1- (1,0) [-32768|32767] "rpm" Vector_XXX
- SG_ AMK_TorqueCurrent : 32|16@1- (1,0) [-32768|32767] "raw" Vector_XXX
+// ============================================================================
+// AMK REAR LEFT INVERTER
+// IDs: Setpoints=387, ActualValues1=642, ActualValues2=643
+// ============================================================================
 
-BO_ 643 AmkRearLeftActualValues2: 8 AMK_Inverter
- SG_ AMK_TempMotor : 0|16@1- (0.1,0) [-3276.8|3276.7] "degC" Vector_XXX
- SG_ AMK_TempInverter : 16|16@1- (0.1,0) [-3276.8|3276.7] "degC" Vector_XXX
- SG_ AMK_DiagnosisNo : 32|16@1+ (1,0) [0|65535] "" Vector_XXX
+BO_ 387 AmkRearLeftSetpoints1: 8 PC
+ SG_ AMK_bInverterOn : 8|1@1+ (1,0) [0|1] ""  AMK_INV_RL
+ SG_ AMK_bDcOn : 9|1@1+ (1,0) [0|1] ""  AMK_INV_RL
+ SG_ AMK_bEnable : 10|1@1+ (1,0) [0|1] ""  AMK_INV_RL
+ SG_ AMK_bErrorReset : 11|1@1+ (1,0) [0|1] ""  AMK_INV_RL
+ SG_ AMK_TargetVelocity : 16|16@1- (1,0) [-32768|32767] "rpm"  AMK_INV_RL
+ SG_ AMK_TorqueLimitPositive : 32|16@1- (0.001,0) [0|1000] "%Mn"  AMK_INV_RL
+ SG_ AMK_TorqueLimitNegative : 48|16@1- (0.001,0) [-1000|0] "%Mn"  AMK_INV_RL
 
-BO_ 388 AmkRearRightSetpoints1: 8 AMK_Inverter
- SG_ AMK_bInverterOn : 8|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bDcOn : 9|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bEnable : 10|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bErrorReset : 11|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_TargetVelocity : 16|16@1- (1,0) [-32768|32767] "rpm" Vector_XXX
- SG_ AMK_TorqueLimitPositive : 32|16@1- (1,0) [0|32767] "raw" Vector_XXX
- SG_ AMK_TorqueLimitNegative : 48|16@1- (1,0) [-32768|0] "raw" Vector_XXX
+BO_ 642 AmkRearLeftActualValues1: 8 AMK_INV_RL
+ SG_ AMK_bSystemReady : 8|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bError : 9|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bWarn : 10|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bQuitDcOn : 11|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bDcOn : 12|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bQuitInverterOn : 13|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bInverterOn : 14|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bDerating : 15|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_ActualVelocity : 16|16@1- (1,0) [-32768|32767] "rpm"  PC
+ SG_ AMK_TorqueCurrent : 32|16@1- (1,0) [-32768|32767] "raw"  PC
+ SG_ AMK_MagnetizingCurrent : 48|16@1- (1,0) [-32768|32767] "raw"  PC
 
-BO_ 644 AmkRearRightActualValues1: 8 AMK_Inverter
- SG_ AMK_bSystemReady : 8|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bError : 9|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bWarn : 10|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bDcOn : 12|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bInverterOn : 14|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_ActualVelocity : 16|16@1- (1,0) [-32768|32767] "rpm" Vector_XXX
- SG_ AMK_TorqueCurrent : 32|16@1- (1,0) [-32768|32767] "raw" Vector_XXX
+BO_ 643 AmkRearLeftActualValues2: 8 AMK_INV_RL
+ SG_ AMK_TempMotor : 0|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+ SG_ AMK_TempInverter : 16|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+ SG_ AMK_ErrorInfo : 32|16@1+ (1,0) [0|65535] ""  PC
+ SG_ AMK_TempIGBT : 48|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
 
-BO_ 645 AmkRearRightActualValues2: 8 AMK_Inverter
- SG_ AMK_TempMotor : 0|16@1- (0.1,0) [-3276.8|3276.7] "degC" Vector_XXX
- SG_ AMK_TempInverter : 16|16@1- (0.1,0) [-3276.8|3276.7] "degC" Vector_XXX
- SG_ AMK_DiagnosisNo : 32|16@1+ (1,0) [0|65535] "" Vector_XXX
+// ============================================================================
+// AMK REAR RIGHT INVERTER
+// IDs: Setpoints=388, ActualValues1=644, ActualValues2=645
+// ============================================================================
 
-BO_ 389 AmkFrontRightSetpoints1: 8 AMK_Inverter
- SG_ AMK_bInverterOn : 8|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bDcOn : 9|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bEnable : 10|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bErrorReset : 11|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_TargetVelocity : 16|16@1- (1,0) [-32768|32767] "rpm" Vector_XXX
- SG_ AMK_TorqueLimitPositive : 32|16@1- (1,0) [0|32767] "raw" Vector_XXX
- SG_ AMK_TorqueLimitNegative : 48|16@1- (1,0) [-32768|0] "raw" Vector_XXX
+BO_ 388 AmkRearRightSetpoints1: 8 PC
+ SG_ AMK_bInverterOn : 8|1@1+ (1,0) [0|1] ""  AMK_INV_RR
+ SG_ AMK_bDcOn : 9|1@1+ (1,0) [0|1] ""  AMK_INV_RR
+ SG_ AMK_bEnable : 10|1@1+ (1,0) [0|1] ""  AMK_INV_RR
+ SG_ AMK_bErrorReset : 11|1@1+ (1,0) [0|1] ""  AMK_INV_RR
+ SG_ AMK_TargetVelocity : 16|16@1- (1,0) [-32768|32767] "rpm"  AMK_INV_RR
+ SG_ AMK_TorqueLimitPositive : 32|16@1- (0.001,0) [0|1000] "%Mn"  AMK_INV_RR
+ SG_ AMK_TorqueLimitNegative : 48|16@1- (0.001,0) [-1000|0] "%Mn"  AMK_INV_RR
 
-BO_ 646 AmkFrontRightActualValues1: 8 AMK_Inverter
- SG_ AMK_bSystemReady : 8|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bError : 9|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bWarn : 10|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bDcOn : 12|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bInverterOn : 14|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_ActualVelocity : 16|16@1- (1,0) [-32768|32767] "rpm" Vector_XXX
- SG_ AMK_TorqueCurrent : 32|16@1- (1,0) [-32768|32767] "raw" Vector_XXX
+BO_ 644 AmkRearRightActualValues1: 8 AMK_INV_RR
+ SG_ AMK_bSystemReady : 8|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bError : 9|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bWarn : 10|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bQuitDcOn : 11|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bDcOn : 12|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bQuitInverterOn : 13|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bInverterOn : 14|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bDerating : 15|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_ActualVelocity : 16|16@1- (1,0) [-32768|32767] "rpm"  PC
+ SG_ AMK_TorqueCurrent : 32|16@1- (1,0) [-32768|32767] "raw"  PC
+ SG_ AMK_MagnetizingCurrent : 48|16@1- (1,0) [-32768|32767] "raw"  PC
 
-BO_ 647 AmkFrontRightActualValues2: 8 AMK_Inverter
- SG_ AMK_TempMotor : 0|16@1- (0.1,0) [-3276.8|3276.7] "degC" Vector_XXX
- SG_ AMK_TempInverter : 16|16@1- (0.1,0) [-3276.8|3276.7] "degC" Vector_XXX
- SG_ AMK_DiagnosisNo : 32|16@1+ (1,0) [0|65535] "" Vector_XXX
+BO_ 645 AmkRearRightActualValues2: 8 AMK_INV_RR
+ SG_ AMK_TempMotor : 0|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+ SG_ AMK_TempInverter : 16|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+ SG_ AMK_ErrorInfo : 32|16@1+ (1,0) [0|65535] ""  PC
+ SG_ AMK_TempIGBT : 48|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
 
-BO_ 390 AmkFrontLeftSetpoints1: 8 AMK_Inverter
- SG_ AMK_bInverterOn : 8|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bDcOn : 9|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bEnable : 10|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bErrorReset : 11|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_TargetVelocity : 16|16@1- (1,0) [-32768|32767] "rpm" Vector_XXX
- SG_ AMK_TorqueLimitPositive : 32|16@1- (1,0) [0|32767] "raw" Vector_XXX
- SG_ AMK_TorqueLimitNegative : 48|16@1- (1,0) [-32768|0] "raw" Vector_XXX
+// ============================================================================
+// AMK FRONT RIGHT INVERTER
+// IDs: Setpoints=389, ActualValues1=646, ActualValues2=647
+// ============================================================================
 
-BO_ 648 AmkFrontLeftActualValues1: 8 AMK_Inverter
- SG_ AMK_bSystemReady : 8|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bError : 9|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bWarn : 10|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bDcOn : 12|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_bInverterOn : 14|1@1+ (1,0) [0|1] "" Vector_XXX
- SG_ AMK_ActualVelocity : 16|16@1- (1,0) [-32768|32767] "rpm" Vector_XXX
- SG_ AMK_TorqueCurrent : 32|16@1- (1,0) [-32768|32767] "raw" Vector_XXX
+BO_ 389 AmkFrontRightSetpoints1: 8 PC
+ SG_ AMK_bInverterOn : 8|1@1+ (1,0) [0|1] ""  AMK_INV_FR
+ SG_ AMK_bDcOn : 9|1@1+ (1,0) [0|1] ""  AMK_INV_FR
+ SG_ AMK_bEnable : 10|1@1+ (1,0) [0|1] ""  AMK_INV_FR
+ SG_ AMK_bErrorReset : 11|1@1+ (1,0) [0|1] ""  AMK_INV_FR
+ SG_ AMK_TargetVelocity : 16|16@1- (1,0) [-32768|32767] "rpm"  AMK_INV_FR
+ SG_ AMK_TorqueLimitPositive : 32|16@1- (0.001,0) [0|1000] "%Mn"  AMK_INV_FR
+ SG_ AMK_TorqueLimitNegative : 48|16@1- (0.001,0) [-1000|0] "%Mn"  AMK_INV_FR
 
-BO_ 649 AmkFrontLeftActualValues2: 8 AMK_Inverter
- SG_ AMK_TempMotor : 0|16@1- (0.1,0) [-3276.8|3276.7] "degC" Vector_XXX
- SG_ AMK_TempInverter : 16|16@1- (0.1,0) [-3276.8|3276.7] "degC" Vector_XXX
- SG_ AMK_DiagnosisNo : 32|16@1+ (1,0) [0|65535] "" Vector_XXX
+BO_ 646 AmkFrontRightActualValues1: 8 AMK_INV_FR
+ SG_ AMK_bSystemReady : 8|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bError : 9|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bWarn : 10|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bQuitDcOn : 11|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bDcOn : 12|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bQuitInverterOn : 13|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bInverterOn : 14|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bDerating : 15|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_ActualVelocity : 16|16@1- (1,0) [-32768|32767] "rpm"  PC
+ SG_ AMK_TorqueCurrent : 32|16@1- (1,0) [-32768|32767] "raw"  PC
+ SG_ AMK_MagnetizingCurrent : 48|16@1- (1,0) [-32768|32767] "raw"  PC
+
+BO_ 647 AmkFrontRightActualValues2: 8 AMK_INV_FR
+ SG_ AMK_TempMotor : 0|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+ SG_ AMK_TempInverter : 16|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+ SG_ AMK_ErrorInfo : 32|16@1+ (1,0) [0|65535] ""  PC
+ SG_ AMK_TempIGBT : 48|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+
+// ============================================================================
+// AMK FRONT LEFT INVERTER
+// IDs: Setpoints=390, ActualValues1=648, ActualValues2=649
+// ============================================================================
+
+BO_ 390 AmkFrontLeftSetpoints1: 8 PC
+ SG_ AMK_bInverterOn : 8|1@1+ (1,0) [0|1] ""  AMK_INV_FL
+ SG_ AMK_bDcOn : 9|1@1+ (1,0) [0|1] ""  AMK_INV_FL
+ SG_ AMK_bEnable : 10|1@1+ (1,0) [0|1] ""  AMK_INV_FL
+ SG_ AMK_bErrorReset : 11|1@1+ (1,0) [0|1] ""  AMK_INV_FL
+ SG_ AMK_TargetVelocity : 16|16@1- (1,0) [-32768|32767] "rpm"  AMK_INV_FL
+ SG_ AMK_TorqueLimitPositive : 32|16@1- (0.001,0) [0|1000] "%Mn"  AMK_INV_FL
+ SG_ AMK_TorqueLimitNegative : 48|16@1- (0.001,0) [-1000|0] "%Mn"  AMK_INV_FL
+
+BO_ 648 AmkFrontLeftActualValues1: 8 AMK_INV_FL
+ SG_ AMK_bSystemReady : 8|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bError : 9|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bWarn : 10|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bQuitDcOn : 11|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bDcOn : 12|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bQuitInverterOn : 13|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bInverterOn : 14|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_bDerating : 15|1@1+ (1,0) [0|1] ""  PC
+ SG_ AMK_ActualVelocity : 16|16@1- (1,0) [-32768|32767] "rpm"  PC
+ SG_ AMK_TorqueCurrent : 32|16@1- (1,0) [-32768|32767] "raw"  PC
+ SG_ AMK_MagnetizingCurrent : 48|16@1- (1,0) [-32768|32767] "raw"  PC
+
+BO_ 649 AmkFrontLeftActualValues2: 8 AMK_INV_FL
+ SG_ AMK_TempMotor : 0|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+ SG_ AMK_TempInverter : 16|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+ SG_ AMK_ErrorInfo : 32|16@1+ (1,0) [0|65535] ""  PC
+ SG_ AMK_TempIGBT : 48|16@1- (0.1,0) [-3276.8|3276.7] "degC"  PC
+
+// ============================================================================
+// COMMENTS - Message Descriptions
+// ============================================================================
+
+CM_ "AMK Racing Kit 4WD - Complete CAN Communication";
+CM_ "Fixed CAN Message Configuration - Intel (Little Endian) format";
+CM_ "Based on AMK Documentation PDK_205481_KW26-S5-FSE-4Q Version 2020/44";
+
+CM_ BO_ 387 "Rear Left Setpoints: Control commands from PC to inverter";
+CM_ BO_ 642 "Rear Left Actual Values 1: Status word and realtime feedback";
+CM_ BO_ 643 "Rear Left Actual Values 2: Temperature monitoring and diagnostics";
+
+CM_ BO_ 388 "Rear Right Setpoints: Control commands from PC to inverter";
+CM_ BO_ 644 "Rear Right Actual Values 1: Status word and realtime feedback";
+CM_ BO_ 645 "Rear Right Actual Values 2: Temperature monitoring and diagnostics";
+
+CM_ BO_ 389 "Front Right Setpoints: Control commands from PC to inverter";
+CM_ BO_ 646 "Front Right Actual Values 1: Status word and realtime feedback";
+CM_ BO_ 647 "Front Right Actual Values 2: Temperature monitoring and diagnostics";
+
+CM_ BO_ 390 "Front Left Setpoints: Control commands from PC to inverter";
+CM_ BO_ 648 "Front Left Actual Values 1: Status word and realtime feedback";
+CM_ BO_ 649 "Front Left Actual Values 2: Temperature monitoring and diagnostics";
+
+// ============================================================================
+// COMMENTS - Signal Descriptions
+// ============================================================================
+
+CM_ SG_ 387 AMK_bInverterOn "Controller enable command";
+CM_ SG_ 387 AMK_bDcOn "HV DC-link activation command";
+CM_ SG_ 387 AMK_bEnable "Driver enable command";
+CM_ SG_ 387 AMK_bErrorReset "Error reset command (all setpoints must be 0)";
+CM_ SG_ 387 AMK_TargetVelocity "Target motor speed setpoint";
+CM_ SG_ 387 AMK_TorqueLimitPositive "Positive torque limit in 0.1% of nominal torque (1000 = 100%)";
+CM_ SG_ 387 AMK_TorqueLimitNegative "Negative torque limit in 0.1% of nominal torque (-1000 = -100%)";
+
+CM_ SG_ 642 AMK_bSystemReady "System ready status (SBM)";
+CM_ SG_ 642 AMK_bError "Error status flag";
+CM_ SG_ 642 AMK_bWarn "Warning status flag";
+CM_ SG_ 642 AMK_bQuitDcOn "HV DC-link activation acknowledgment";
+CM_ SG_ 642 AMK_bDcOn "HV DC-link activation status";
+CM_ SG_ 642 AMK_bQuitInverterOn "Controller enable acknowledgment";
+CM_ SG_ 642 AMK_bInverterOn "Controller enable status";
+CM_ SG_ 642 AMK_bDerating "Derating active (torque limitation in effect)";
+CM_ SG_ 642 AMK_ActualVelocity "Actual motor speed";
+CM_ SG_ 642 AMK_TorqueCurrent "Raw torque-producing current Iq. Convert: Iq[A] = raw * IMax / 32767";
+CM_ SG_ 642 AMK_MagnetizingCurrent "Raw magnetizing current Id for field weakening. Convert: Id[A] = raw * IMax / 32767";
+
+CM_ SG_ 643 AMK_TempMotor "Motor winding temperature";
+CM_ SG_ 643 AMK_TempInverter "Inverter cold plate temperature";
+CM_ SG_ 643 AMK_ErrorInfo "Diagnostic error code number";
+CM_ SG_ 643 AMK_TempIGBT "IGBT power module temperature";
+
+// ============================================================================
+// ATTRIBUTES
+// ============================================================================
 
 BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_ "GenSigStartValue" FLOAT 0 10000;
+
+// Cycle time: 5ms for all messages (AMK default)
 BA_ "GenMsgCycleTime" BO_ 387 5;
 BA_ "GenMsgCycleTime" BO_ 642 5;
 BA_ "GenMsgCycleTime" BO_ 643 5;
@@ -109,3 +216,75 @@ BA_ "GenMsgCycleTime" BO_ 647 5;
 BA_ "GenMsgCycleTime" BO_ 390 5;
 BA_ "GenMsgCycleTime" BO_ 648 5;
 BA_ "GenMsgCycleTime" BO_ 649 5;
+
+// Start values for torque limits (100% = 1000)
+BA_ "GenSigStartValue" SG_ 387 AMK_TorqueLimitPositive 1000;
+BA_ "GenSigStartValue" SG_ 388 AMK_TorqueLimitPositive 1000;
+BA_ "GenSigStartValue" SG_ 389 AMK_TorqueLimitPositive 1000;
+BA_ "GenSigStartValue" SG_ 390 AMK_TorqueLimitPositive 1000;
+
+BA_ "GenSigStartValue" SG_ 387 AMK_TorqueLimitNegative -1000;
+BA_ "GenSigStartValue" SG_ 388 AMK_TorqueLimitNegative -1000;
+BA_ "GenSigStartValue" SG_ 389 AMK_TorqueLimitNegative -1000;
+BA_ "GenSigStartValue" SG_ 390 AMK_TorqueLimitNegative -1000;
+
+// ============================================================================
+// VALUE TABLES
+// ============================================================================
+
+VAL_ 642 AMK_bSystemReady 0 "Not_Ready" 1 "System_Ready";
+VAL_ 642 AMK_bError 0 "No_Error" 1 "Error_Active";
+VAL_ 642 AMK_bWarn 0 "No_Warning" 1 "Warning_Active";
+VAL_ 642 AMK_bQuitDcOn 0 "Not_Acknowledged" 1 "Acknowledged";
+VAL_ 642 AMK_bDcOn 0 "HV_Off" 1 "HV_On";
+VAL_ 642 AMK_bQuitInverterOn 0 "Not_Acknowledged" 1 "Acknowledged";
+VAL_ 642 AMK_bInverterOn 0 "Inverter_Off" 1 "Inverter_On";
+VAL_ 642 AMK_bDerating 0 "No_Derating" 1 "Derating_Active";
+
+VAL_ 644 AMK_bSystemReady 0 "Not_Ready" 1 "System_Ready";
+VAL_ 644 AMK_bError 0 "No_Error" 1 "Error_Active";
+VAL_ 644 AMK_bWarn 0 "No_Warning" 1 "Warning_Active";
+VAL_ 644 AMK_bQuitDcOn 0 "Not_Acknowledged" 1 "Acknowledged";
+VAL_ 644 AMK_bDcOn 0 "HV_Off" 1 "HV_On";
+VAL_ 644 AMK_bQuitInverterOn 0 "Not_Acknowledged" 1 "Acknowledged";
+VAL_ 644 AMK_bInverterOn 0 "Inverter_Off" 1 "Inverter_On";
+VAL_ 644 AMK_bDerating 0 "No_Derating" 1 "Derating_Active";
+
+VAL_ 646 AMK_bSystemReady 0 "Not_Ready" 1 "System_Ready";
+VAL_ 646 AMK_bError 0 "No_Error" 1 "Error_Active";
+VAL_ 646 AMK_bWarn 0 "No_Warning" 1 "Warning_Active";
+VAL_ 646 AMK_bQuitDcOn 0 "Not_Acknowledged" 1 "Acknowledged";
+VAL_ 646 AMK_bDcOn 0 "HV_Off" 1 "HV_On";
+VAL_ 646 AMK_bQuitInverterOn 0 "Not_Acknowledged" 1 "Acknowledged";
+VAL_ 646 AMK_bInverterOn 0 "Inverter_Off" 1 "Inverter_On";
+VAL_ 646 AMK_bDerating 0 "No_Derating" 1 "Derating_Active";
+
+VAL_ 648 AMK_bSystemReady 0 "Not_Ready" 1 "System_Ready";
+VAL_ 648 AMK_bError 0 "No_Error" 1 "Error_Active";
+VAL_ 648 AMK_bWarn 0 "No_Warning" 1 "Warning_Active";
+VAL_ 648 AMK_bQuitDcOn 0 "Not_Acknowledged" 1 "Acknowledged";
+VAL_ 648 AMK_bDcOn 0 "HV_Off" 1 "HV_On";
+VAL_ 648 AMK_bQuitInverterOn 0 "Not_Acknowledged" 1 "Acknowledged";
+VAL_ 648 AMK_bInverterOn 0 "Inverter_Off" 1 "Inverter_On";
+VAL_ 648 AMK_bDerating 0 "No_Derating" 1 "Derating_Active";
+
+VAL_ 387 AMK_bInverterOn 0 "Disable" 1 "Enable";
+VAL_ 387 AMK_bDcOn 0 "Disable" 1 "Enable";
+VAL_ 387 AMK_bEnable 0 "Disable" 1 "Enable";
+VAL_ 387 AMK_bErrorReset 0 "No_Action" 1 "Reset_Error";
+
+VAL_ 388 AMK_bInverterOn 0 "Disable" 1 "Enable";
+VAL_ 388 AMK_bDcOn 0 "Disable" 1 "Enable";
+VAL_ 388 AMK_bEnable 0 "Disable" 1 "Enable";
+VAL_ 388 AMK_bErrorReset 0 "No_Action" 1 "Reset_Error";
+
+VAL_ 389 AMK_bInverterOn 0 "Disable" 1 "Enable";
+VAL_ 389 AMK_bDcOn 0 "Disable" 1 "Enable";
+VAL_ 389 AMK_bEnable 0 "Disable" 1 "Enable";
+VAL_ 389 AMK_bErrorReset 0 "No_Action" 1 "Reset_Error";
+
+VAL_ 390 AMK_bInverterOn 0 "Disable" 1 "Enable";
+VAL_ 390 AMK_bDcOn 0 "Disable" 1 "Enable";
+VAL_ 390 AMK_bEnable 0 "Disable" 1 "Enable";
+VAL_ 390 AMK_bErrorReset 0 "No_Action" 1 "Reset_Error";
+
