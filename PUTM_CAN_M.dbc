@@ -105,17 +105,14 @@ BO_ 47 Pdu_Channnel: 4 PDU
  SG_ rbox_diagport_brake_l_status : 16|2@1+ (1,0) [0|3] "" Vector__XXX
  SG_ brake_ir_air_status : 18|2@1+ (1,0) [0|3] "" Vector__XXX
 
-BO_ 55 Pdu_Data_1: 8 PDU
- SG_ pc_current : 0|16@1+ (0.001,0) [0|65.535] "A" Vector__XXX
- SG_ pump_current : 16|16@1+ (0.001,0) [0|65.535] "A" Vector__XXX
- SG_ fan_current : 32|16@1+ (0.001,0) [0|65.535] "A" Vector__XXX
- SG_ inverter_current : 48|16@1+ (0.001,0) [0|65.535] "A" Vector__XXX
-
-BO_ 54 Pdu_Data_2: 8 PDU
- SG_ fbox_current : 0|16@1+ (0.001,0) [0|65.535] "A" Vector__XXX
- SG_ sdc_current : 16|16@1+ (0.001,0) [0|65.535] "A" Vector__XXX
- SG_ total_current : 32|16@1+ (0.001,0) [0|65.535] "A" Vector__XXX
- SG_ reserved : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+BO_ 54 Pdu_Data: 8 PDU
+ SG_ pc_current : 0|8@1+ (0.01,0) [0|2.55] "A" Vector__XXX
+ SG_ pump_current : 8|8@1+ (0.01,0) [0|2.55] "A" Vector__XXX
+ SG_ fan_current : 16|8@1+ (0.01,0) [0|2.55] "A" Vector__XXX
+ SG_ inverter_current : 24|8@1+ (0.01,0) [0|2.55] "A" Vector__XXX
+ SG_ fbox_current : 32|8@1+ (0.01,0) [0|2.55] "A" Vector__XXX
+ SG_ sdc_current : 40|8@1+ (0.01,0) [0|2.55] "A" Vector__XXX
+ SG_ total_current : 48|16@1+ (0.01,0) [0|655.35] "A" Vector__XXX
 
 BO_ 5 DriverInput: 8 FRONTBOX
  SG_ pedalPosition : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
