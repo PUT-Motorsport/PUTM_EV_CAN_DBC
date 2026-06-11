@@ -122,7 +122,8 @@ BO_ 5 DriverInput: 8 FRONTBOX
  SG_ pedalPosition : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ brakePressureFront : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ brakePressureRear : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ steeringWheelPosition : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ stock_value1 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ stock_value2 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 53 Front_Data: 7 FRONTBOX
  SG_ sense_left_kill : 0|1@1+ (1,0) [0|1] "" Vector__XXX
