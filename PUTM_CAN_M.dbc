@@ -32,7 +32,7 @@ NS_ :
 
 BS_:
 
-BU_: STEERING_WHEEL REARBOX PC PDU FRONTBOX DASHBOARD BMS_LV BMS_HV Host IVT_Mod
+BU_: STEERING_WHEEL REARBOX PC PDU FRONTBOX DASHBOARD BMS_LV BMS_HV HOST IVT_MOD TIRE_TEMPERATURE_SENSOR
 
 
 BO_ 37 Rearbox_Safety: 2 REARBOX
@@ -176,38 +176,54 @@ BO_ 32 SteeringWheel: 8 STEERING_WHEEL
  SG_ measurement3 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement4 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
 
+ BO_ 40 TireTemp_FL: 2 TIRE_TEMPERATURE_SENSOR
+ SG_ tireTemp_FL : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ heartbeat_FL : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 41 TireTemp_FR: 2 TIRE_TEMPERATURE_SENSOR
+ SG_ tireTemp_FR : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ heartbeat_FR : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 42 TireTemp_RL: 2 TIRE_TEMPERATURE_SENSOR
+ SG_ tireTemp_RL : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ heartbeat_RL : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 43 TireTemp_RR: 2 TIRE_TEMPERATURE_SENSOR
+ SG_ tireTemp_RR : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ heartbeat_RR : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+
 BO_ 0 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
    SG_ _B1_Resp_Trigger_Mask : 0|16@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _B9_Resp_Device_spare : 0|8@0+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1320 IVT_Msg_Result_Wh: 6 IVT_Mod
+BO_ 1320 IVT_Msg_Result_Wh: 6 IVT_MOD
    SG_ IVT_Result_Wh_System_Error : 15|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_Wh_OCS : 12|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_Wh_Measurement_Error : 14|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_Wh_Channel_Error : 13|1@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ IVT_Result_Wh : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "Wh" Host
-   SG_ IVT_MsgCount_Result_Wh : 11|4@0+ (1,0) [0|0] "" Host
-   SG_ IVT_ID_Result_Wh : 7|8@0+ (1,0) [7|7] "" Host
+   SG_ IVT_Result_Wh : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "Wh" HOST
+   SG_ IVT_MsgCount_Result_Wh : 11|4@0+ (1,0) [0|0] "" HOST
+   SG_ IVT_ID_Result_Wh : 7|8@0+ (1,0) [7|7] "" HOST
 
-BO_ 1319 IVT_Msg_Result_As: 6 IVT_Mod
+BO_ 1319 IVT_Msg_Result_As: 6 IVT_MOD
    SG_ IVT_Result_As_System_Error : 15|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_As_OCS : 12|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_As_Measurement_Error : 14|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_As_Channel_Error : 13|1@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ IVT_Result_As : 23|32@0- (1,0) [-2.14748e+10|2.14748e+09] "As" Host
-   SG_ IVT_MsgCount_Result_As : 11|4@0+ (1,0) [0|0] "" Host
-   SG_ IVT_ID_Result_As : 7|8@0+ (1,0) [6|6] "" Host
+   SG_ IVT_Result_As : 23|32@0- (1,0) [-2.14748e+10|2.14748e+09] "As" HOST
+   SG_ IVT_MsgCount_Result_As : 11|4@0+ (1,0) [0|0] "" HOST
+   SG_ IVT_ID_Result_As : 7|8@0+ (1,0) [6|6] "" HOST
 
-BO_ 1318 IVT_Msg_Result_W: 6 IVT_Mod
+BO_ 1318 IVT_Msg_Result_W: 6 IVT_MOD
    SG_ IVT_Result_W_System_Error : 15|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_W_OCS : 12|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_W_Measurement_Error : 14|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_W_Channel_Error : 13|1@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ IVT_Result_W : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "W" Host
-   SG_ IVT_MsgCount_Result_W : 11|4@0+ (1,0) [0|0] "" Host
-   SG_ IVT_ID_Result_W : 7|8@0+ (1,0) [5|5] "" Host
+   SG_ IVT_Result_W : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "W" HOST
+   SG_ IVT_MsgCount_Result_W : 11|4@0+ (1,0) [0|0] "" HOST
+   SG_ IVT_ID_Result_W : 7|8@0+ (1,0) [5|5] "" HOST
 
-BO_ 1297 IVT_Msg_Response: 8 IVT_Mod
+BO_ 1297 IVT_Msg_Response: 8 IVT_MOD
    SG_ _B1_Trigger_spare m177 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _B1_07_Trigger_WH m177 : 23|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _B1_06_Trigger_As m177 : 22|1@0+ (1,0) [0|0] "" Vector__XXX
@@ -307,54 +323,54 @@ BO_ 1297 IVT_Msg_Response: 8 IVT_Mod
    SG_ _BA_Resp_SW_Ver_Major_HW m186 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _BB_Resp_Serien_Nr m187 : 15|32@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _BC_Resp_Art_N m188 : 15|56@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ IVT_ID_Response M : 7|8@0+ (1,0) [0|0] "" Host
+   SG_ IVT_ID_Response M : 7|8@0+ (1,0) [0|0] "" HOST
 
-BO_ 1317 IVT_Msg_Result_T: 6 IVT_Mod
+BO_ 1317 IVT_Msg_Result_T: 6 IVT_MOD
    SG_ IVT_Result_T_System_Error : 15|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_T_OCS : 12|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_T_Measurement_Error : 14|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_T_Channel_Error : 13|1@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ IVT_ID_Result_T : 7|8@0+ (1,0) [4|4] "" Host
-   SG_ IVT_Result_T : 23|32@0- (0.1,0) [-2.14748e+09|2.14748e+09] "�C" Host
-   SG_ IVT_MsgCount_Result_T : 11|4@0+ (1,0) [0|0] "" Host
+   SG_ IVT_ID_Result_T : 7|8@0+ (1,0) [4|4] "" HOST
+   SG_ IVT_Result_T : 23|32@0- (0.1,0) [-2.14748e+09|2.14748e+09] "�C" HOST
+   SG_ IVT_MsgCount_Result_T : 11|4@0+ (1,0) [0|0] "" HOST
 
-BO_ 1316 IVT_Msg_Result_U3: 6 IVT_Mod
+BO_ 1316 IVT_Msg_Result_U3: 6 IVT_MOD
    SG_ IVT_Result_U3_System_Error : 15|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_U3_OCS : 12|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_U3_Measurement_Error : 14|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_U3_Channel_Error : 13|1@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ IVT_ID_Result_U3 : 7|8@0+ (1,0) [3|3] "" Host
-   SG_ IVT_Result_U3 : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "mV" Host
-   SG_ IVT_MsgCount_Result_U3 : 11|4@0+ (1,0) [0|0] "" Host
+   SG_ IVT_ID_Result_U3 : 7|8@0+ (1,0) [3|3] "" HOST
+   SG_ IVT_Result_U3 : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "mV" HOST
+   SG_ IVT_MsgCount_Result_U3 : 11|4@0+ (1,0) [0|0] "" HOST
 
-BO_ 1315 IVT_Msg_Result_U2: 6 IVT_Mod
+BO_ 1315 IVT_Msg_Result_U2: 6 IVT_MOD
    SG_ IVT_Result_U2_System_Error : 15|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_U2_OCS : 12|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_U2_Measurement_Error : 14|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_U2_Channel_Error : 13|1@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ IVT_ID_Result_U2 : 7|8@0+ (1,0) [2|2] "" Host
-   SG_ IVT_MsgCount_Result_U2 : 11|4@0+ (1,0) [0|0] "" Host
-   SG_ IVT_Result_U2 : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "mV" Host
+   SG_ IVT_ID_Result_U2 : 7|8@0+ (1,0) [2|2] "" HOST
+   SG_ IVT_MsgCount_Result_U2 : 11|4@0+ (1,0) [0|0] "" HOST
+   SG_ IVT_Result_U2 : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "mV" HOST
 
-BO_ 1314 IVT_Msg_Result_U1: 6 IVT_Mod
+BO_ 1314 IVT_Msg_Result_U1: 6 IVT_MOD
    SG_ IVT_Result_U1_System_Error : 15|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_U1_Measurement_Error : 14|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_U1_Channel_Error : 13|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_U1_OCS : 12|1@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ IVT_ID_Result_U1 : 7|8@0+ (1,0) [1|1] "" Host
-   SG_ IVT_Result_U1 : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "mV" Host
-   SG_ IVT_MsgCount_Result_U1 : 11|4@0+ (1,0) [0|0] "" Host
+   SG_ IVT_ID_Result_U1 : 7|8@0+ (1,0) [1|1] "" HOST
+   SG_ IVT_Result_U1 : 23|32@0- (1,0) [-2.14748e+09|2.14748e+09] "mV" HOST
+   SG_ IVT_MsgCount_Result_U1 : 11|4@0+ (1,0) [0|0] "" HOST
 
-BO_ 1313 IVT_Msg_Result_I: 6 IVT_Mod
+BO_ 1313 IVT_Msg_Result_I: 6 IVT_MOD
    SG_ IVT_Result_I_System_Error : 15|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_I_OCS : 12|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_I_Measurement_Error : 14|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_Result_I_Channel_Error : 13|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ IVT_ID_Result_I : 7|8@0+ (-1,0) [0|0] "" Vector__XXX
-   SG_ IVT_MsgCount_Result_I : 11|4@0+ (1,0) [0|0] "" Host
-   SG_ IVT_Result_I : 23|32@0- (-0.001,0) [-2.14748e+09|2.14748e+09] "A" Host
+   SG_ IVT_MsgCount_Result_I : 11|4@0+ (1,0) [0|0] "" HOST
+   SG_ IVT_Result_I : 23|32@0- (-0.001,0) [-2.14748e+09|2.14748e+09] "A" HOST
 
-BO_ 1041 IVT_Msg_Cmd: 8 Host
+BO_ 1041 IVT_Msg_Cmd: 8 HOST
    SG_ _31_01_Trigger_U1 m49 : 17|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _31_07_Trigger_WH m49 : 23|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _31_06_Trigger_As m49 : 22|1@0+ (1,0) [0|0] "" Vector__XXX
@@ -364,7 +380,7 @@ BO_ 1041 IVT_Msg_Cmd: 8 Host
    SG_ _31_Trigger_spare m49 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _31_02_Trigger_U2 m49 : 18|1@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _10_Set_Can_ID_SN_I m16 : 31|32@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ _10_Set_Can_ID_val_I m16 : 15|16@0+ (1,0) [0|2047] "" IVT_Mod
+   SG_ _10_Set_Can_ID_val_I m16 : 15|16@0+ (1,0) [0|2047] "" IVT_MOD
    SG_ _11_Set_Can_ID_SN_U1 m17 : 31|32@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _11_Set_Can_ID_val_U1 m17 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
    SG_ _12_Set_Can_ID_SN_U2 m18 : 31|32@0+ (1,0) [0|0] "" Vector__XXX
@@ -460,7 +476,7 @@ BO_ 1041 IVT_Msg_Cmd: 8 Host
    SG_ _7A_Get_SW_Version_dummy m122 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _7B_Get_Serien_Nr_dummy m123 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
    SG_ _7C_Get_Art_Nr_dummy m124 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
-   SG_ IVT_ID_Cmd M : 7|8@0+ (1,0) [0|0] "" IVT_Mod
+   SG_ IVT_ID_Cmd M : 7|8@0+ (1,0) [0|0] "" IVT_MOD
 
 
 BA_DEF_ BU_ "Manufacturer" STRING ;
@@ -507,9 +523,9 @@ BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
 BA_DEF_DEF_ "filterlabeling" 0;
 BA_DEF_DEF_ "matchingcriteria" 0;
 
-BA_ "ILUsed" BU_ IVT_Mod 1;             
-BA_ "NmNode" BU_ IVT_Mod 1;              
-BA_ "Manufacturer" BU_ IVT_Mod "Isabellenhuette";
+BA_ "ILUsed" BU_ IVT_MOD 1;             
+BA_ "NmNode" BU_ IVT_MOD 1;              
+BA_ "Manufacturer" BU_ IVT_MOD "Isabellenhuette";
 BA_ "GenMsgSendType" BO_ 1320 1;
 BA_ "GenSigSendType" SG_ 1320 IVT_Result_Wh 0;
 BA_ "GenSigStartValue" SG_ 1320 IVT_Result_Wh 0;
