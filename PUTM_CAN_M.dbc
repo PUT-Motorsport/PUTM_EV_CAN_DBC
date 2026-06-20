@@ -178,21 +178,45 @@ BO_ 32 SteeringWheel: 8 STEERING_WHEEL
  SG_ measurement3 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement4 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
 
-BO_ 40 TireTemp_FL: 2 TIRE_TEMPERATURE_SENSOR
- SG_ tireTemp_FL : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
- SG_ heartbeat_FL : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 40 TireTemp_FL: 8 TIRE_TEMPERATURE_SENSOR
+ SG_ tireTemp_FL_1 : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FL_2 : 8|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FL_3 : 16|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FL_4 : 24|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FL_5 : 32|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FL_6 : 40|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FL_7 : 48|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FL_8 : 56|8@1+ (1,0) [0|255] "°C" Vector__XXX
 
-BO_ 41 TireTemp_FR: 2 TIRE_TEMPERATURE_SENSOR
- SG_ tireTemp_FR : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
- SG_ heartbeat_FR : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 41 TireTemp_FR: 8 TIRE_TEMPERATURE_SENSOR
+ SG_ tireTemp_FR_1 : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FR_2 : 8|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FR_3 : 16|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FR_4 : 24|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FR_5 : 32|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FR_6 : 40|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FR_7 : 48|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_FR_8 : 56|8@1+ (1,0) [0|255] "°C" Vector__XXX
 
-BO_ 42 TireTemp_RL: 2 TIRE_TEMPERATURE_SENSOR
- SG_ tireTemp_RL : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
- SG_ heartbeat_RL : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 42 TireTemp_RL: 8 TIRE_TEMPERATURE_SENSOR
+ SG_ tireTemp_RL_1 : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RL_2 : 8|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RL_3 : 16|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RL_4 : 24|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RL_5 : 32|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RL_6 : 40|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RL_7 : 48|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RL_8 : 56|8@1+ (1,0) [0|255] "°C" Vector__XXX
 
-BO_ 43 TireTemp_RR: 2 TIRE_TEMPERATURE_SENSOR
- SG_ tireTemp_RR : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
- SG_ heartbeat_RR : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 43 TireTemp_RR: 8 TIRE_TEMPERATURE_SENSOR
+ SG_ tireTemp_RR_1 : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RR_2 : 8|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RR_3 : 16|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RR_4 : 24|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RR_5 : 32|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RR_6 : 40|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RR_7 : 48|8@1+ (1,0) [0|255] "°C" Vector__XXX
+ SG_ tireTemp_RR_8 : 56|8@1+ (1,0) [0|255] "°C" Vector__XXX
 
 BO_ 0 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ _B1_Resp_Trigger_Mask : 0|16@0+ (1,0) [0|0] "" Vector__XXX
