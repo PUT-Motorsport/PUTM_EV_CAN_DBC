@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: STEERING_WHEEL REARBOX PC PDU FRONTBOX DASHBOARD BMS_LV BMS_HV HOST IVT_MOD TIRE_TEMPERATURE_SENSOR
+BU_: STEERING_WHEEL REARBOX PC PDU FRONTBOX DASHBOARD BMS_LV BMS_HV HOST IVT_MOD TIRE_TEMPERATURE_SENSOR CURRENT_SENSORS
 
 
 BO_ 37 Rearbox_Safety: 2 REARBOX
@@ -177,6 +177,12 @@ BO_ 32 SteeringWheel: 8 STEERING_WHEEL
  SG_ measurement2 : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement3 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement4 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 33 Current_Sensors_Data: 8 CURRENT_SENSORS
+ SG_ fl_inv_current : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ fr_inv_current : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ rr_inv_current : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ rl_inv_current : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
 
 BO_ 40 TireTemp_FL: 8 TIRE_TEMPERATURE_SENSOR
  SG_ tireTemp_FL_1 : 0|8@1+ (1,0) [0|255] "°C" Vector__XXX
