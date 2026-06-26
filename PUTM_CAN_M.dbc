@@ -173,7 +173,7 @@ BO_ 69 Bms_HV_main: 8 BMS_HV
  SG_ precharge : 59|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 32 SteeringWheel: 8 STEERING_WHEEL
- SG_ steeringWheelPosition : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ steeringWheelPosition : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
  SG_ measurement2 : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement3 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ measurement4 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
