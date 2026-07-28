@@ -164,6 +164,7 @@ BO_ 86 Bms_LV_temperature: 8 BMS_LV
  SG_ temp_8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 69 Bms_HV_main: 8 BMS_HV
+ SG_ ts_on : 60|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ voltage_sum : 0|16@1+ (1,0) [0|65535] "cV" Vector__XXX
  SG_ current : 16|16@1- (1,0) [-32768|32767] "cA" Vector__XXX
  SG_ temp_max : 32|8@1+ (1,0) [0|255] "C" Vector__XXX
@@ -554,9 +555,9 @@ BA_DEF_DEF_  "GenMsgBackgroundColor" "#ffffff";
 BA_DEF_DEF_  "GenMsgForegroundColor" "#000000";
 BA_DEF_DEF_  "filterlabeling" 0;
 BA_DEF_DEF_  "matchingcriteria" 0;
-BA_ "Manufacturer" BU_ IVT_MOD "Isabellenhuette";
-BA_ "NmNode" BU_ IVT_MOD 1;
 BA_ "ILUsed" BU_ IVT_MOD 1;
+BA_ "NmNode" BU_ IVT_MOD 1;
+BA_ "Manufacturer" BU_ IVT_MOD "Isabellenhuette";
 BA_ "GenMsgSendType" BO_ 1320 1;
 BA_ "GenMsgSendType" BO_ 1319 1;
 BA_ "GenMsgSendType" BO_ 1318 1;
@@ -566,37 +567,37 @@ BA_ "GenMsgSendType" BO_ 1316 1;
 BA_ "GenMsgSendType" BO_ 1315 1;
 BA_ "GenMsgSendType" BO_ 1314 1;
 BA_ "GenMsgSendType" BO_ 1313 1;
-BA_ "NmMessage" BO_ 1041 1;
 BA_ "GenMsgSendType" BO_ 1041 7;
-BA_ "GenSigStartValue" SG_ 1320 IVT_Result_Wh 0;
+BA_ "NmMessage" BO_ 1041 1;
 BA_ "GenSigSendType" SG_ 1320 IVT_Result_Wh 0;
-BA_ "GenSigStartValue" SG_ 1320 IVT_ID_Result_Wh 0;
+BA_ "GenSigStartValue" SG_ 1320 IVT_Result_Wh 0;
 BA_ "GenSigSendType" SG_ 1320 IVT_ID_Result_Wh 0;
+BA_ "GenSigStartValue" SG_ 1320 IVT_ID_Result_Wh 0;
 BA_ "GenSigStartValue" SG_ 1319 IVT_Result_As 0;
-BA_ "GenSigStartValue" SG_ 1319 IVT_ID_Result_As 0;
 BA_ "GenSigSendType" SG_ 1319 IVT_ID_Result_As 0;
+BA_ "GenSigStartValue" SG_ 1319 IVT_ID_Result_As 0;
 BA_ "GenSigStartValue" SG_ 1318 IVT_Result_W 0;
-BA_ "GenSigStartValue" SG_ 1318 IVT_ID_Result_W 0;
 BA_ "GenSigSendType" SG_ 1318 IVT_ID_Result_W 0;
+BA_ "GenSigStartValue" SG_ 1318 IVT_ID_Result_W 0;
 BA_ "GenSigStartValue" SG_ 1297 _A0_Resp_TriggerMode_I 0;
 BA_ "GenSigStartValue" SG_ 1297 _A4_Resp_TriggerMode_T 0;
 BA_ "GenSigStartValue" SG_ 1297 _A5_Resp_TriggerMode_W 0;
 BA_ "GenSigStartValue" SG_ 1297 _A6_Resp_TriggerMode_As 0;
 BA_ "GenSigStartValue" SG_ 1297 _A7_Resp_TriggerMode_WH 0;
-BA_ "GenSigStartValue" SG_ 1317 IVT_ID_Result_T 0;
 BA_ "GenSigSendType" SG_ 1317 IVT_ID_Result_T 0;
+BA_ "GenSigStartValue" SG_ 1317 IVT_ID_Result_T 0;
 BA_ "GenSigStartValue" SG_ 1317 IVT_Result_T 0;
-BA_ "GenSigStartValue" SG_ 1316 IVT_ID_Result_U3 0;
 BA_ "GenSigSendType" SG_ 1316 IVT_ID_Result_U3 0;
-BA_ "GenSigStartValue" SG_ 1315 IVT_ID_Result_U2 0;
+BA_ "GenSigStartValue" SG_ 1316 IVT_ID_Result_U3 0;
 BA_ "GenSigSendType" SG_ 1315 IVT_ID_Result_U2 0;
-BA_ "GenSigStartValue" SG_ 1314 IVT_ID_Result_U1 0;
+BA_ "GenSigStartValue" SG_ 1315 IVT_ID_Result_U2 0;
 BA_ "GenSigSendType" SG_ 1314 IVT_ID_Result_U1 0;
+BA_ "GenSigStartValue" SG_ 1314 IVT_ID_Result_U1 0;
 BA_ "GenSigSendType" SG_ 1314 IVT_Result_U1 0;
-BA_ "GenSigStartValue" SG_ 1313 IVT_ID_Result_I 0;
 BA_ "GenSigSendType" SG_ 1313 IVT_ID_Result_I 0;
-BA_ "GenSigStartValue" SG_ 1313 IVT_Result_I 0;
+BA_ "GenSigStartValue" SG_ 1313 IVT_ID_Result_I 0;
 BA_ "GenSigSendType" SG_ 1313 IVT_Result_I 0;
+BA_ "GenSigStartValue" SG_ 1313 IVT_Result_I 0;
 BA_ "GenSigStartValue" SG_ 1041 _20_Conf_TriggerMode_I 0;
 BA_ "GenSigStartValue" SG_ 1041 _24_Conf_TriggerMode_T 0;
 BA_ "GenSigStartValue" SG_ 1041 _25_Conf_TriggerMode_W 0;
